@@ -1,0 +1,271 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/AdobeFnt23.lst
+FileLength:4838
+FileModTime:681155833
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Amplitude-Bold
+FamilyName:Amplitude
+StyleName:Bold
+MenuName:Amplitude Bold
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Amplitude Bold
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/Amplitude-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:26456
+FileModTime:206389818
+NameArray:0,Mac,4,Amplitude Bold
+NameArray:0,Win,1,Amplitude Bold
+NameArray:0,Win,16,Amplitude
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Amplitude-BoldItalic
+FamilyName:Amplitude
+StyleName:BoldItalic
+MenuName:Amplitude BoldItalic
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Amplitude BoldItalic
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/Amplitude-BoldItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:31700
+FileModTime:181766174
+NameArray:0,Mac,4,Amplitude BoldItalic
+NameArray:0,Win,1,Amplitude BoldItalic
+NameArray:0,Win,16,Amplitude
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Amplitude-Light
+FamilyName:Amplitude
+StyleName:Light
+MenuName:Amplitude Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Amplitude Light
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/Amplitude-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:26984
+FileModTime:646001809
+NameArray:0,Mac,4,Amplitude Light
+NameArray:0,Win,1,Amplitude Light
+NameArray:0,Win,16,Amplitude
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Amplitude-LightItalic
+FamilyName:Amplitude
+StyleName:LightItalic
+MenuName:Amplitude LightItalic
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:1
+FullName:Amplitude LightItalic
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/Amplitude-LightItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:31452
+FileModTime:646001810
+NameArray:0,Mac,4,Amplitude LightItalic
+NameArray:0,Win,1,Amplitude LightItalic
+NameArray:0,Win,16,Amplitude
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Amplitude-Medium
+FamilyName:Amplitude
+StyleName:Medium
+MenuName:Amplitude Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Amplitude Medium
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/Amplitude-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:29880
+FileModTime:646001810
+NameArray:0,Mac,4,Amplitude Medium
+NameArray:0,Win,1,Amplitude Medium
+NameArray:0,Win,16,Amplitude
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Amplitude-MediumItalic
+FamilyName:Amplitude
+StyleName:MediumItalic
+MenuName:Amplitude MediumItalic
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:1
+FullName:Amplitude MediumItalic
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/Amplitude-MediumItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:34944
+FileModTime:646001810
+NameArray:0,Mac,4,Amplitude MediumItalic
+NameArray:0,Win,1,Amplitude MediumItalic
+NameArray:0,Win,16,Amplitude
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Amplitude-Regular
+FamilyName:Amplitude
+StyleName:Regular
+MenuName:Amplitude Regular
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Amplitude
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/Amplitude-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:29696
+FileModTime:646001810
+NameArray:0,Mac,18,Amplitude Regular
+NameArray:0,Mac,4,Amplitude
+NameArray:0,Win,1,Amplitude Regular
+NameArray:0,Win,16,Amplitude
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Amplitude-RegularItalic
+FamilyName:Amplitude
+StyleName:RegularItalic
+MenuName:Amplitude RegularItalic
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Amplitude RegularItalic
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/Amplitude-RegularItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:33112
+FileModTime:646001808
+NameArray:0,Mac,4,Amplitude RegularItalic
+NameArray:0,Win,1,Amplitude RegularItalic
+NameArray:0,Win,16,Amplitude
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:CelesteOT-Ita
+FamilyName:Celeste OT
+StyleName:Italic
+MenuName:Celeste OT Italic
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Celeste OT Italic
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/CelesteOT-Ita.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:52772
+FileModTime:646001809
+NameArray:0,Mac,4,Celeste OT Italic
+NameArray:0,Win,1,Celeste OT Italic
+NameArray:0,Win,16,Celeste OT
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:CelesteOT
+FamilyName:Celeste OT
+StyleName:Regular
+MenuName:Celeste OT
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Celeste OT
+WritingScript:Roman
+OutlineFileName:/Users/F608003/Desktop/Untitled-1 Folder/Document fonts/CelesteOT.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:53648
+FileModTime:646001810
+NameArray:0,Mac,4,Celeste OT
+NameArray:0,Win,1,Celeste OT
+%EndFont
+

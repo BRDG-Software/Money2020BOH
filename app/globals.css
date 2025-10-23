@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+/* Amplitude Font Family */
+@font-face {
+  font-family: 'Amplitude';
+  src: url('/fonts/JPMP Font - Amplitude/Amplitude-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amplitude';
+  src: url('/fonts/JPMP Font - Amplitude/Amplitude-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amplitude';
+  src: url('/fonts/JPMP Font - Amplitude/Amplitude-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amplitude';
+  src: url('/fonts/JPMP Font - Amplitude/Amplitude-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amplitude';
+  src: url('/fonts/JPMP Font - Amplitude/Amplitude-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amplitude';
+  src: url('/fonts/JPMP Font - Amplitude/Amplitude-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amplitude';
+  src: url('/fonts/JPMP Font - Amplitude/Amplitude-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amplitude';
+  src: url('/fonts/JPMP Font - Amplitude/Amplitude-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --background: #EDE1D8;
+  --foreground: #221812;
+  --light-black: #221812;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-light-black: var(--light-black);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-amplitude: 'Amplitude', var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  
+  /* Custom breakpoint */
+  --breakpoint-1700: 1700px;
+  --breakpoint-1600: 1600px;
+  --breakpoint-1550: 1550px;
+  --breakpoint-1500: 1500px;
+  --breakpoint-1400: 1400px;
+  --breakpoint-1300: 1300px;
+  --breakpoint-1200: 1200px;
+  --breakpoint-1150: 1150px;
+  --breakpoint-1100: 1100px;
+  
+  /* Custom max-width */
+  /* --max-width-1700: 1700px; */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #EDE1D8;
+    --foreground: #221812;
+  }
+}
+
+body {
+  /*
+  overflow: hidden;
+  position:fixed;
+  */
+  overflow:hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Amplitude', var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Ensure Amplitude font is applied to all text elements */
+* {
+  font-family: 'Amplitude', var(--font-geist-sans), system-ui, -apple-system, sans-serif !important;
+}
+
+/* Specific font classes for Amplitude */
+.font-amplitude {
+  font-family: 'Amplitude', var(--font-geist-sans), system-ui, -apple-system, sans-serif !important;
+}
+
+/* Override any Tailwind font classes */
+.font-sans {
+  font-family: 'Amplitude', var(--font-geist-sans), system-ui, -apple-system, sans-serif !important;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Custom switch animations */
+@keyframes switchPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes switchSlide {
+  0% { 
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateX(50%) scale(1.05);
+    opacity: 0.9;
+  }
+  100% { 
+    transform: translateX(100%) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes switchSlideBack {
+  0% { 
+    transform: translateX(100%) scale(1.1);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateX(50%) scale(1.05);
+    opacity: 0.9;
+  }
+  100% { 
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.switch-thumb {
+  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.switch-thumb.active {
+  animation: switchPop 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.switch-thumb.sliding {
+  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.switch-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.switch-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.switch-button:active {
+  transform: scale(0.98);
+}
+
+/* Main Switches */
+/* Responsive switch transforms */
+.switch-thumb-on {
+  transform: translateX(76px); /* Default for screens under 1550px */
+}
+@media (min-width: 1200px) {
+  .switch-thumb-on {
+    transform: translateX(96px); /* For screens 1200px and above */
+  }
+}
+@media (min-width: 1550px) {
+  .switch-thumb-on {
+    transform: translateX(115px); /* For screens 1550px and above */
+  }
+}
+.switch-thumb-off {
+  transform: translateX(0px);
+}
+
+/* Scroll-based scaling animations */
+.order-item {
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+  will-change: transform, opacity, box-shadow;
+}
+
+.order-item.scale-up {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  position: relative;
+  opacity: 1;
+}
+
+.order-item.scale-down {
+  transform: scale(0.95);
+  opacity: 0.7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.order-item.scale-normal {
+  transform: scale(1);
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}

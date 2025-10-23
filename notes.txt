@@ -1,0 +1,25 @@
+JUICES
+kiosk: juice
+Daily Greens
+Roots With Ginger
+Sweet Citrus
+
+SUGARFINA
+Dark Chocolate Sea Salt Caramels
+	id: 1
+	kiosk:sweet
+Lemon Shortbread Cookies
+	id: 13
+Peach Bellini Gummy Hearts
+	id: 14
+
+https://jarvusinnovations.github.io/brdg-jpmp-money2020/openapi/#/default/post_items
+
+https://docs.google.com/spreadsheets/d/1hKmByouMo2hmkzNCYpjSu6A8qIzqUgD_aIfeGnHojSI/edit?gid=0#gid=0
+
+
+
+745263 jpmp signup test pin
+
+ipads
+passcode: brdg20
