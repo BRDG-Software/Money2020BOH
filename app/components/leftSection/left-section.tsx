@@ -25,7 +25,7 @@ const LeftSection = ({ screenStatus }: { screenStatus: boolean }) => {
     refetch: refetchLatestOrders,
     isFetching: isFetchingLatestOrders,
   } = useGetLatestOrdersQuery(20, {
-    pollingInterval: 30000, // Poll every 60 seconds
+    pollingInterval: 10000, // Poll every 60 seconds
     refetchOnMountOrArgChange: false,
     refetchOnFocus: false,
     refetchOnReconnect: true,
@@ -37,7 +37,7 @@ const LeftSection = ({ screenStatus }: { screenStatus: boolean }) => {
     refetch: refetchCompletedLatestOrders,
     isFetching: isFetchingCompletedLatestOrders,
   } = useGetCompletedLatestOrdersQuery(2, {
-    pollingInterval: 30000, // Poll every 60 seconds
+    pollingInterval: 10000, // Poll every 60 seconds
     refetchOnMountOrArgChange: false,
     refetchOnFocus: false,
     refetchOnReconnect: true,

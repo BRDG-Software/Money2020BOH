@@ -58,7 +58,7 @@ const OrderCard = ({
           )}
         >
           {/* {order.firstName} */}
-          John Doe
+          {order.user_profile.firstName}
         </p>
         <p
           className={cn(

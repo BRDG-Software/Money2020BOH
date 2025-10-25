@@ -1,21 +1,30 @@
 JUICES
 kiosk: juice
 Daily Greens
+	id: 1
 Roots With Ginger
+	id: 2
 Sweet Citrus
+	id: 3
 
 SUGARFINA
 Dark Chocolate Sea Salt Caramels
-	id: 1
+	id: 5
 	kiosk:sweet
 Lemon Shortbread Cookies
-	id: 13
+	id: 4
 Peach Bellini Gummy Hearts
-	id: 14
+	id: 6
+gift with purchae
+	id: 7
+
+https://jarvusinnovations.github.io/brdg-jpmp-money2020/
 
 https://jarvusinnovations.github.io/brdg-jpmp-money2020/openapi/#/default/post_items
 
 https://docs.google.com/spreadsheets/d/1hKmByouMo2hmkzNCYpjSu6A8qIzqUgD_aIfeGnHojSI/edit?gid=0#gid=0
+
+https://vaultwarden.jarv.us/#/send/C-SA2hnSRcK6sAX6umfdOQ/O9N0rcsKsApeUtT8iRkdxg
 
 
 

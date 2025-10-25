@@ -96,6 +96,32 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
     }
   };
 
+  const [sweetItemsReal, setSweetitemsReal] = useState([
+      {id:1,
+      "name": "Lemon Shortbread"
+      },
+      {id:2,
+      "name": "Peach Bellini"
+      },
+      {id:3,
+      "name": "Dark Chocolate Sea Salt"
+      }
+    ]
+  )
+  const [juiceItemsReal, setJuiceItemsReal] = useState([
+      {id:1,
+      "name": "Green Juice"
+      },
+      {id:2,
+      "name": "Roots with Ginger"
+      },
+      {id:3,
+      "name": "Sweet Citrus"
+      }
+    ]
+  )
+  //console.log(`J ${JSON.stringify(juiceItems)}`)
+  //console.log(`R ${JSON.stringify(juiceItemsReal)}`)
   return (
     <div className="w-[37%] h-full border-l-[6px] border-light-black 1550:p-[40px] p-[25px] flex flex-col gap-y-[20px]">
       {/* main switches */}
@@ -118,10 +144,10 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
           <div
             className={cn(
               "flex flex-col gap-y-[20px] pt-10",
-              sweetItems.length < 4 && " pt-30"
+              sweetItemsReal.length < 4 && " pt-30"
             )}
           >
-            {sweetItems.map((item) => (
+            {sweetItemsReal.map((item) => (
               <div key={item.id} className="flex justify-between items-center">
                 <h1 className="text-black 1550:text-[32px] text-[28px] leading-8 ">
                   {item.name}
@@ -157,10 +183,10 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
           <div
             className={cn(
               "flex flex-col gap-y-[29px] pt-10",
-              juiceItems.length < 4 && " pt-30"
+              juiceItemsReal.length < 4 && " pt-30"
             )}
           >
-            {juiceItems.map((item) => (
+            {juiceItemsReal.map((item) => (
               <div key={item.id} className="flex justify-between items-center">
                 <h1 className="text-black 1550:text-[32px] text-[28px] leading-8">
                   {item.name}
