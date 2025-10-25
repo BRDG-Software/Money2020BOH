@@ -97,23 +97,23 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
   };
 
   const [sweetItemsReal, setSweetitemsReal] = useState([
-      {id:1,
+      {id:4,
       "name": "Lemon Shortbread"
       },
-      {id:2,
+      {id:6,
       "name": "Peach Bellini"
       },
-      {id:3,
-      "name": "Dark Chocolate Sea Salt"
+      {id:5,
+      "name": "Dark Chocolate"
       }
     ]
   )
   const [juiceItemsReal, setJuiceItemsReal] = useState([
       {id:1,
-      "name": "Green Juice"
+      "name": "Daily Greens"
       },
       {id:2,
-      "name": "Roots with Ginger"
+      "name": "Roots w/ Ginger"
       },
       {id:3,
       "name": "Sweet Citrus"
@@ -157,9 +157,9 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
                     <button
                       disabled={isUpdating}
                       onClick={() =>
-                        toggleSwitch(`sugarfina-${item.id}`, "sweet", item.id)
+                          toggleSwitch(`sugarfina-${item.id}`, "sweet", item.id)
                       }
-                      className={`switch-button relative 1550:w-[120px] w-[100px] 1550:h-[59px] h-[49px] rounded-full flex items-center border-4 border-[#EDE1D8] p-1 ${
+                      className={`bswitch-button relative 1550:w-[120px] w-[100px] 1550:h-[59px] h-[49px] rounded-full flex items-center border-4 border-[#EDE1D8] p-1 ${
                         switchStates[`sugarfina-${item.id}`]
                           ? "bg-[#7AC943]"
                           : "bg-[#C1272D]"

@@ -1,5 +1,6 @@
 import { cn } from "@/app/lib/utils";
 import { useUpdateOrderMutation } from "@/redux/slices/ordersSlice";
+import { useState } from "react"
 import { dismissAllToasts, orderToasts } from "@/app/lib/toast";
 import React from "react";
 import { OrderCardProps } from "@/app/lib/types";
@@ -40,6 +41,44 @@ const OrderCard = ({
       }
     }
   };
+
+  const [sweetItemsReal, setSweetitemsReal] = useState([
+      {id:1,
+      "name": "Lemon Shortbread"
+      },
+      {id:2,
+      "name": "Peach Bellini"
+      },
+      {id:3,
+      "name": "Dark Chocolate"
+      }
+    ]
+  )
+  const [juiceItemsReal, setJuiceItemsReal] = useState([
+      {id:1,
+      "name": "Daily Greens"
+      },
+      {id:2,
+      "name": "Roots w/ Ginger"
+      },
+      {id:3,
+      "name": "Sweet Citrus"
+      }
+    ]
+  )
+  const allItemsReal = {
+    "peachbellinigummyhearts": "Peach Bellini",
+    "darkchocolateseasaltcaramels": "Dark Chocolate",
+    "lemonshortbreadcookies":"Lemon Shortbread",
+    "dailygreens": "Daily Greens",
+    "rootswithginger": "Roots w/ Ginger",
+    "sweetcitrus":"Sweet Citrus",
+    "giftwithpurchase": "GIFT",
+
+  }
+  //console.log(`slugs: ${order.items}`)
+  //console.log(`realos: ${JSON.stringify(sweetItemsReal)}`)
+  //console.log(`order items ${JSON.stringify(order.items)}`)
   return (
     <div
       key={order.id}
@@ -89,7 +128,7 @@ const OrderCard = ({
                 order.status === "pending" ? "text-black" : "text-[#00000040]"
               )}
             >
-              {item.name}
+              {allItemsReal[item.slug]}
             </h2>
           ))}
         </div>
