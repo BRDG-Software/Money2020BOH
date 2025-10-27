@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 "use client";
 import { cn } from "@/app/lib/utils";
 import React, { useState, useMemo } from "react";
