@@ -226,13 +226,15 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
           </div>
         )}
       </div>
+      <div className = "flex flex-col gap-y[29px] pt-10">
       <div className="
-      w-full h-[30vh] absolute top-[550px] flex justify-betwen items-center
+      flex justify-between items-center
       ">
-        <h1 className="text-black 1550:text-[32px] text-[28px] leading-8">
+        <h1 className="flex-1 text-black 1550:text-[32px] text-[28px] leading-8">
                   Gift
                 </h1>
-              <div className="relative left-[434px]">
+  
+              <div className=" relative ">
                   <div className="1550:w-[126px] w-[106px] 1550:h-[65px] h-[55px] bg-white rounded-full flex items-center justify-center">
                     <button
 
@@ -257,6 +259,7 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
                     </button>
                   </div>
               </div>
+      </div>
       </div>
       {/* RESTART EXPERIENCE Button */}
       <div className="flex justify-center">
