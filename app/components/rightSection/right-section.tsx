@@ -188,7 +188,7 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
         ) : (
           <div
             className={cn(
-              "flex flex-col gap-y-[29px] pt-10",
+              "flex flex-col gap-y-[20px] pt-10",
               juiceItemsReal.length < 4 && " pt-30"
             )}
           >
@@ -226,7 +226,7 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
           </div>
         )}
       </div>
-      <div className = "flex flex-col gap-y[29px] pt-10">
+      <div className = "flex flex-col gap-y[20px] pt-10">
       <div className="
       flex justify-between items-center
       ">
