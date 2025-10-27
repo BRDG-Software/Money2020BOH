@@ -90,6 +90,7 @@ const OrderCard = ({
     >
       {/* Left section - Guest Info */}
       <div className="flex flex-col">
+        {order.user_profile.firstName &&
         <p
           className={cn(
             " 1400:text-[30px] text-[26px] font-medium text-center leading-8 ",
@@ -99,6 +100,7 @@ const OrderCard = ({
           {/* {order.firstName} */}
           {order.user_profile.firstName}
         </p>
+        }
         <p
           className={cn(
             " 1400:text-[30px] text-[26px] font-medium text-center leading-8 ",

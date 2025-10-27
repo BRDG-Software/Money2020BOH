@@ -19,11 +19,11 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
     refetch: refetchItems,
   } = useGetAllItemsQuery();
   const [updateItem, { isLoading: isUpdating }] = useUpdateItemsMutation();
-
+  
   // Filter and separate items by type
-  const { sweetItems, juiceItems } = useMemo(() => {
+  const { sweetItems, juiceItems, giftItems } = useMemo(() => {
     if (!itemsData?.items) {
-      return { sweetItems: [], juiceItems: [] };
+      return { sweetItems: [], juiceItems: [], giftItems: [] };
     }
 
     const sweetItems = itemsData.items.filter(
@@ -32,8 +32,10 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
     const juiceItems = itemsData.items.filter(
       (item) => item.item_type === "juice"
     );
-
-    return { sweetItems, juiceItems };
+    const giftItems = itemsData.items.filter(
+      (item) => item.item_type === "gift"
+    );
+    return { sweetItems, juiceItems, giftItems };
   }, [itemsData]);
 
   // Initialize switch states based on availability from API data
@@ -51,8 +53,12 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
       newStates[`juice-${item.id}`] = item.available;
     });
 
+    giftItems.forEach((item) => {
+      newStates[`gift-${item.id}`] = item.available;
+    });
+
     setSwitchStates(newStates);
-  }, [sweetItems, juiceItems]);
+  }, [sweetItems, juiceItems, giftItems]);
 
   const toggleSwitch = (
     switchId: string,
@@ -120,8 +126,6 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
       }
     ]
   )
-  //console.log(`J ${JSON.stringify(juiceItems)}`)
-  //console.log(`R ${JSON.stringify(juiceItemsReal)}`)
   return (
     <div className="w-[37%] h-full border-l-[6px] border-light-black 1550:p-[40px] p-[25px] flex flex-col gap-y-[20px]">
       {/* main switches */}
@@ -220,7 +224,38 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
           </div>
         )}
       </div>
+      <div className="
+      w-full h-[30vh] absolute top-[550px] flex justify-betwen items-center
+      ">
+        <h1 className="text-black 1550:text-[32px] text-[28px] leading-8">
+                  Gift
+                </h1>
+              <div className="relative left-[434px]">
+                  <div className="1550:w-[126px] w-[106px] 1550:h-[65px] h-[55px] bg-white rounded-full flex items-center justify-center">
+                    <button
 
+                      disabled={isUpdating}
+                      onClick={() =>
+                        toggleSwitch(`gift-7`, "gift", 1)
+                      }
+                      className={`switch-button relative 1550:w-[120px] w-[100px] 1550:h-[59px] h-[49px] rounded-full flex items-center border-4 border-[#EDE1D8] p-1 ${
+                        switchStates[`gift-7`]
+                          ? "bg-[#7AC943]"
+                          : "bg-[#C1272D]"
+                      } ${isUpdating ? "opacity-50 cursor-not-allowed" : ""}`}
+                    >
+                      {/* White thumb */}
+                      <div
+                        className={`switch-thumb sliding 1550:w-[46px] w-[37px] 1550:h-[46px] h-[37px] bg-white rounded-full flex items-center justify-center shadow-lg ${
+                          switchStates[`gift-7`]
+                            ? "ml-auto scale-100 active"
+                            : "ml-0 scale-100"
+                        }`}
+                      ></div>
+                    </button>
+                  </div>
+              </div>
+      </div>
       {/* RESTART EXPERIENCE Button */}
       <div className="flex justify-center">
         <button
