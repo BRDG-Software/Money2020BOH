@@ -16,7 +16,7 @@ const OrderCard = ({
   index,
 }: OrderCardProps) => {
   const [updateOrder, { isLoading: isUpdating }] = useUpdateOrderMutation();
-
+  console.log(JSON.stringify(order))
   const handleUpdateOrder = async (id: number, status: string) => {
     dismissAllToasts();
     try {
@@ -67,6 +67,7 @@ const OrderCard = ({
       }
     ]
   )
+
   const allItemsReal = {
     "peachbellinigummyhearts": "Peach Bellini",
     "darkchocolateseasaltcaramels": "Dark Chocolate",

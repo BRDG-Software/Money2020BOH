@@ -7,7 +7,25 @@ export interface OrderItem {
     name: string;
     description: string;
   }
+
+export interface userProfile {
+  id: string | "not-available";
+  firstName: string | "Jawn Doe";
+}
   
+  export interface Order {
+    id: number;
+    kiosk_id: number;
+    status: "pending" | "completed" | "canceled";
+    user_profile: userProfile[];
+    created_at: string;
+    completed_at: string | null;
+    survey_response: any | null;
+    kiosk_type: string;
+    items: OrderItem[];
+  }
+  
+/*
   export interface Order {
     id: number;
     kiosk_id: number;
@@ -19,7 +37,8 @@ export interface OrderItem {
     kiosk_type: string;
     items: OrderItem[];
   }
-  
+*/
+
   export interface OrdersResponse {
     orders: Order[];
   }
