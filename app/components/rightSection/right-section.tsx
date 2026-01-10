@@ -240,7 +240,7 @@ const RightSection = ({ screenStatus, setScreenStatus }: RightSectionProps) => {
 
                       disabled={isUpdating}
                       onClick={() =>
-                        toggleSwitch(`gift-7`, "gift", 1)
+                        toggleSwitch(`gift-7`, "gift", 7)
                       }
                       className={`switch-button relative 1550:w-[120px] w-[100px] 1550:h-[59px] h-[49px] rounded-full flex items-center border-4 border-[#EDE1D8] p-1 ${
                         switchStates[`gift-7`]
