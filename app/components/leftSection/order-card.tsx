@@ -1,10 +1,14 @@
 // @ts-nocheck
+'use client'; //for new gift check
 import { cn } from "@/app/lib/utils";
 import { useUpdateOrderMutation } from "@/redux/slices/ordersSlice";
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { dismissAllToasts, orderToasts } from "@/app/lib/toast";
 import React from "react";
+import axios from 'axios'; //for new gift check
 import { OrderCardProps } from "@/app/lib/types";
+
+const dbURL = process.env.NEXT_PUBLIC_API_URL;
 
 const OrderCard = ({
   order,
@@ -15,8 +19,11 @@ const OrderCard = ({
   isFetchingOrders,
   index,
 }: OrderCardProps) => {
+    //new gift check var
+  const [gifty, setGifty] = useState("")
+
   const [updateOrder, { isLoading: isUpdating }] = useUpdateOrderMutation();
-  console.log(JSON.stringify(order))
+  //console.log(JSON.stringify(order))
   const handleUpdateOrder = async (id: number, status: string) => {
     dismissAllToasts();
     try {
@@ -75,12 +82,45 @@ const OrderCard = ({
     "dailygreens": "Daily Greens",
     "rootswithginger": "Roots w/ Ginger",
     "sweetcitrus":"Sweet Citrus",
-    "giftwithpurchase": "GIFT",
+    //"giftwithpurchase": "GIFT", //removed for new gift with purchase
 
   }
   //console.log(`slugs: ${order.items}`)
   //console.log(`realos: ${JSON.stringify(sweetItemsReal)}`)
   //console.log(`order items ${JSON.stringify(order.items)}`)
+  
+    //new gift check functions
+  const tryUserOrders = (id) => {
+    const convert1 = id.replace(/ /g, '%20')
+    const convert2 = convert1.replace(/\+/g, "%2B")
+    console.log(`NEW USER ID: ${convert2}`)
+    getUserOrders(convert2)
+  }
+  async function getUserOrders(userId) {
+    try { 
+      const response = await axios.get(dbURL + '/orders?user=' + userId)
+      //console.log(response.data)
+      const dt = response.data
+      console.log(dt.orders.length)
+      if (dt.orders.length == 3) {
+        //console.log("gift!")
+        setGifty("GIFT")
+      } else {
+        //console.log("don't do gift")
+        setGifty("")
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  useEffect(() => {
+    if (order.status == "pending") {
+      //console.log(`order: ${JSON.stringify(order)}`)
+      console.log(JSON.stringify(order.user_profile.id))
+      tryUserOrders(order.user_profile.id) //new gift check
+    }
+  },[])
+
   return (
     <div
       key={order.id}
@@ -133,8 +173,16 @@ const OrderCard = ({
               )}
             >
               {allItemsReal[item.slug]}
+
             </h2>
           ))}
+            <h2
+              className={cn(
+                "text-black 1400:text-[30px] text-[26px] font-medium text-center leading-2",
+                order.status === "pending" ? "text-black" : "text-[#00000040]"
+              )}>
+                        {gifty}
+            </h2>
         </div>
       </div>
 

@@ -53,7 +53,6 @@ const LeftSection = ({ screenStatus }: { screenStatus: boolean }) => {
     const uniqueOrders = combinedOrders.filter(
       (order, index, self) => index === self.findIndex((o) => o.id === order.id)
     );
-
     // Sort by created_at
     const sortedOrders = uniqueOrders.sort(
       (a, b) =>
@@ -75,8 +74,10 @@ const LeftSection = ({ screenStatus }: { screenStatus: boolean }) => {
       setOrdersData(sortedOrders);
       setLastOrdersHash(currentOrdersHash);
       console.log("Orders updated - changes detected");
+      //console.log(`current order ${JSON.stringify(currentOrdersHash)}`)
     } else {
       console.log("Orders unchanged - no re-render needed");
+      //console.log(`current order ${JSON.stringify(currentOrdersHash)}`)
     }
   }, [latestOrdersData, completedLatestOrdersData, lastOrdersHash]);
 
